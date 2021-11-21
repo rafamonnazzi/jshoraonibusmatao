@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> HORA ÔNIBUS MATÃO </title>
+    <link rel="stylesheet" href="estilomapa.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""> </script>
+</head>
+<body class="container">
+    <header>
+        <div class="container-logo">
+                <div class="logo-imagem"><img src="onibuslogo1.png" width="120px" height="120px"></div>
+        </div>
+        <div class="container-texto">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet">
+                <ul>
+                <em><a>Hora Ônibus Matão</a></em>
+                </ul>   
+        </div>
+        <div class="menu">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+            <ul>
+                <li><a href="file:///C:/Users/Usuario/Desktop/PROJETO%20INTEGRADOR/Rodovi%C3%A1ria-PI.html">INICIO</a></li>
+                <li><a href="#">SOBRE</a></li>
+                <li><a href="#">SERVIÇOS</a></li>
+                <li><a href="#">ÔNIBUS</a></li>
+            </ul>   
+        </div>
+    </header>
+    <main>
+        <a href="file:///C:/Users/Usuario/Desktop/PROJETO%20INTEGRADOR/Rodovi%C3%A1ria-PI.html"><img src="voltar.png" width="30px" height="30px">
+    <div class= "caixa-conteudo"> 
+            <div class="box1">
+                <link rel="preconnect" href="https://fonts.googleapis.com">
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,700&display=swap" rel="stylesheet">
+                <ul>
+                    <a href="#">BUSER</a>
+                </ul>
+            </div> 
+
+        <div class= "caixa-conteudo2"> 
+            <div class="box2"> 
+                <ul>
+                    <a href="#">HOTEL AVENIDA</a>
+                </ul>
+                <a href="https://www.google.com/maps/place/Hotel+Avenida+Mat%C3%A3o/@-21.6193281,-48.3595345,17z/data=!3m1!4b1!4m8!3m7!1s0x94b8e1cd147298b7:0x4861d37ef27437f3!5m2!4m1!1i2!8m2!3d-21.6193036!4d-48.3573333"><img src="maps google.png" width="40px" height="40px"></a>
+            </div>
+
+               <div class="box7">     
+                <ul>
+                    <a href="#">HORÁRIOS</a>
+                </ul>
+            </div>  
+        </div>
+        <div class= "caixa-conteudo3"> 
+            <div class="box4">     
+                <ul>
+                    <a href="#">Matão X Campinas - R$106,50</a>  
+
+                    <div class="box8">     
+                        <ul>
+                            <ul class="a">TODOS OS DIAS:</ul>  <br> 
+                            <ul>09:30 / 17:30</ul> <br>
+                        </ul>  
+                    </div>
+                </ul> 
+             </div>     
+                <div class="box5">     
+                    <ul>
+                        <a href="#">Matão X São Paulo - R$115,00</a>
+                    </ul>   
+                </div>
+                <div class="box6">     
+                    <ul>
+                        <a href="#">Matão X Barretos - R$50,00</a>
+                    </ul>   
+            </div>
+        </div> 
+    </div>
+    
+    
+    
+    <div id="map"> </div> 
+                <script>// Initialize the map and assign it to a variable for later use
+                    // there's a few ways to declare a VARIABLE in javascript.
+                    // you might also see people declaring variables using `const` and `let`
+                    var map = L.map('map', {
+                        // Set latitude and longitude of the map center (required)
+                        center: [-21.6213715, -48.3688843],
+                        // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
+                        zoom: 10
+                    });
+                     
+                    // Create a Tile Layer and add it to the map
+                    var tiles = new L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                      minZoom: '15'}).addTo(map);
+                    
+                    var marker = L.marker(
+                      [-21.6191949,-48.3635689],
+                      { 
+                        draggable: true,
+                        title: "",
+                        opacity: 0.75
+                    });
+                    
+                    marker.addTo(map).bindPopup("<p1><b> Hotel Avenida  </p1>") .openPopup();
+                </script>
+                </main>
+
+                <footer>
+                    <div class="container-contato">
+                        <div class="logo-contato"><img src="tel.png" width="50px" height="50px">(16)1234-5678</div>
+                    </div>
+                        <div class="logo-contato2"><img src="email.png" width="50px" height="50px">CONTATO/FALE CONOSCO</div>
+                    </div>
+
+                    <div class= "redesocial">
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                        <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+
+                        <ul>
+                            <a>REDES SOCIAIS:</a>
+                        </ul>    
+
+                    <div class="logo-contato3"><img src="insta.png" width="45px" height="45px"></div>
+                    <div class="logo-contato3"><img src="face.png" width="45px" height="45px"></div>
+                    <div class="logo-contato3"><img src="whats.png" width="45px" height="45px"></div>
+                    </div>
+                </footer>
+</body>
+</html>

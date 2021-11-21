@@ -1,0 +1,26 @@
+.excersice{
+    padding-top: 10px;
+    padding-left: 38%;
+    
+  }
+
+h5 {
+    margin:100px auto;
+    width:20vw;
+    text-align:center;
+    font-family: helvetica;
+    font-weight:700;
+    font-size:3em;
+  }
+  
+  p {
+    margin:auto;
+    width:60vw;
+    text-align:justify;
+    font-family:didot;
+    line-height:1.5;
+    font-family: 'Rubik', sans-serif;
+    margin: 50px;
+    text-align: justify;
+
+  }
